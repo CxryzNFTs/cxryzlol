@@ -57,25 +57,6 @@
                 var video = document.getElementById("video");
                 video.play()
             }
-
-            $('.contact').hover(
-                async function() {
-                    var $this = $(this); // caching $(this)
-                    $this.data('defaultText', 'contact');
-                    await $this.fadeOut(null, async function() {
-                        document.getElementsByClassName('contact')[0].innerHTML = 'contact@cxryz.lol'
-                        await $this.fadeIn(1000);
-                    });
-
-                },
-                async function() {
-                    var $this = $(this); // caching $(this)
-                    await $this.fadeOut(null, async function() {
-                        await $this.text($this.data('defaultText'));
-                        await $this.fadeIn(1000);
-                    });
-                }
-            );
         </script>
         <input type="checkbox" autocomplete="off" id="overlay-toggle">
         <div class="overlay fullscreen">
@@ -161,6 +142,26 @@
                                 </i>
                                 </div>
                             </div>
+                            <script>
+                                $('.contact').hover(
+                                    async function() {
+                                        var $this = $(this); // caching $(this)
+                                        $this.data('defaultText', 'contact');
+                                        await $this.fadeOut(null, async function() {
+                                            document.getElementsByClassName('contact')[0].innerHTML = 'contact@cxryz.lol'
+                                            await $this.fadeIn(1000);
+                                        });
+
+                                    },
+                                    async function() {
+                                        var $this = $(this); // caching $(this)
+                                        await $this.fadeOut(null, async function() {
+                                            await $this.text($this.data('defaultText'));
+                                            await $this.fadeIn(1000);
+                                        });
+                                    }
+                                );
+                            </script>
                         </div>
                     </div>
             </div>

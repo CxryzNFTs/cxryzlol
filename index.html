@@ -4,6 +4,7 @@
 <head>
     <link rel="icon" href="./assets/images/favicon.ico">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3230534145137287" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Cxryz#0001</title>
@@ -56,6 +57,25 @@
                 var video = document.getElementById("video");
                 video.play()
             }
+
+            $('.contact').hover(
+                async function() {
+                    var $this = $(this); // caching $(this)
+                    $this.data('defaultText', 'contact');
+                    await $this.fadeOut(null, async function() {
+                        document.getElementsByClassName('contact')[0].innerHTML = 'contact@cxryz.lol'
+                        await $this.fadeIn(1000);
+                    });
+
+                },
+                async function() {
+                    var $this = $(this); // caching $(this)
+                    await $this.fadeOut(null, async function() {
+                        await $this.text($this.data('defaultText'));
+                        await $this.fadeIn(1000);
+                    });
+                }
+            );
         </script>
         <input type="checkbox" autocomplete="off" id="overlay-toggle">
         <div class="overlay fullscreen">
@@ -73,67 +93,76 @@
         <section class="fullscreen text-content">
             <div id="center">
                 <h1 style="font-family: derk; white-space: nowrap;">
-                    <h1 style="text-shadow: 0 0 0.40em white; font-size: 3rem !important; font-weight: bolder !important; font-family: derk; inline-block; text-align: center">Cxryz<i style="padding-left: 8px; font-size: 2rem; inline-block; text-align: center" class="fa-solid fa-badge-check fa-xs" style="color: #1da1f2;"></i></h1>
-                <div class="container is-fluid">
-                    <div class="box blur" style="background-color: transparent;">                   
-                        <div class="columns">
-                            <div class="column box rounded">
-                                <i class="fa fa-brands fa-instagram">
+                    <!-- <h1 style="text-shadow: 0 0 0.40em white; font-size: 3rem !important; font-weight: bolder !important; font-family: derk; text-align: center">Cxryz<i style="padding-left: 8px; font-size: 2rem; display: inline-block;" class="fa-solid fa-badge-check fa-xs" style="color: #1da1f2;"></i></h1> -->
+                    <h1 style="text-shadow: 0 0 0.40em white; font-size: 3rem !important; font-weight: bolder !important; font-family: derk; text-align: center">Cxryz<i style="stroke: #fff; text-shadow: none; padding-left: 8px; font-size: 2rem; text-align: center;" class="fa-solid fa-badge-check fa-xs" style="color: #1da1f2;"></i></h1>
+                    <div class="container is-fluid">
+                        <div class="box blur" style="background-color: transparent;">
+                            <div class="columns">
+                                <div class="column box rounded">
+                                    <i class="fa fa-brands fa-instagram">
                                     <a href="https://instagram.com/cxryzlol" style="text-decoration:none; font-family: derk; font: 1em; color: black;">instagram</a>
                                 </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
-                        <div class="columns">
-                            <div class="column box rounded" style="background-color:white;">
-                                <i class="fa fa-brands fa-youtube ">
+                            <span></span>
+                            <div class="columns">
+                                <div class="column box rounded" style="background-color:white;">
+                                    <i class="fa fa-brands fa-youtube ">
                                     <a href="https://youtube.com/cxryz" style="text-decoration:none; font-family: derk; font-size: 1em; color: black;">youtube</a>
                                 </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
+                            <span></span>
 
-                        <div class="columns">
-                            <div class="column box rounded" style="background-color:white;">
-                                <i class="fa fa-brands fa-twitter">
+                            <div class="columns">
+                                <div class="column box rounded" style="background-color:white;">
+                                    <i class="fa fa-brands fa-twitter">
                                 <a href="https://twitter.com/cxryzlol" style="text-decoration:none; font-family: derk; font-size: 1em; color: black;">twitter</a>
                             </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
+                            <span></span>
 
-                        <div class="columns ">
-                            <div class="column box rounded" style="background-color:white;">
-                                <i class="fa fa-book-user">
+                            <div class="columns ">
+                                <div class="column box rounded" style="background-color:white;">
+                                    <i class="fa fa-book-user">
                                     <a href="https://solo.to/cxryz" style="text-decoration:none; font-family: derk; font-size: 1em; color: black;">solo.to</a>
                                 </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
+                            <span></span>
 
-                        <div class="columns">
-                            <div class="column box rounded" style="background-color:white;">
-                                <i class="fa fa-square-terminal">
+                            <div class="columns">
+                                <div class="column box rounded" style="background-color:white;">
+                                    <i class="fa fa-square-terminal">
                                     <a href="https://repl.it/@notcxryz" style="text-decoration:none; font-family: derk; font-size: 1em; color: black;">repl.it</a>
                                 </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
+                            <span></span>
 
-                        <div class="columns">
-                            <div class="column box rounded" style="background-color:white;">
-                                <i class="fa fa-slot-machine">
+                            <div class="columns">
+                                <div class="column box rounded" style="background-color:white;">
+                                    <i class="fa fa-slot-machine">
                                     <a href="unblockedgames.html" style="text-decoration:none; font-family: derk; font-size: 1em; color: black;">unblocked games</a>
                                 </i>
+                                </div>
                             </div>
-                        </div>
-                        <span></span>
+                            <span></span>
+                            <span></span>
+                            <!-- Contact Styling -->
+                            <style>
 
+                            </style>
+                            <div class="columns">
+                                <div class="column box rounded" style="background-color:black; border-style: solid;border-color: white;">
+                                    <i class="fa fa-envelope" style="color: white; display: inline-block;">
+                                    <p class="contact" style="text-decoration:none; font-family: derk; font-size: 1em; color: white !important;display: inline-block;">contact</p>
                                 </i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
     </main>
 
